@@ -13,9 +13,18 @@
 // let secondVar = prompt('Input user lastname');
 // document.write('"User name: ', firstVar, '  User last name: ', secondVar, '"');
 
-let language = prompt('Enter ru or uk');
-if(language=='uk'){
-   document.write();
+
+
+let langSelect = prompt('Enter ru or uk');
+if(langSelect =='uk'){
+   document.write('true');
+   console.log('true');
+} else if(langSelect == 'ru') {
+   document.write('false');
+} else{
+   document.write('You not enter ru either uk');
 }
+
+ 
 
 

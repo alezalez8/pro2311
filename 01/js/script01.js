@@ -25,6 +25,10 @@ if(langSelect =='uk'){
    document.write('You not enter ru either uk');
 }
 
+
+
+//prompt('Enter uk or ru ', '').toLowerCase() === 'uk' ? true : false;
+
  
 
 

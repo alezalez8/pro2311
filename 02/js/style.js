@@ -1,6 +1,6 @@
 //calculator
-let a = parseInt(prompt('Enter first number'));
-let b = parseInt(prompt('Enter second number'));
+let a = parseFloat(prompt('Enter first number'));
+let b = parseFloat(prompt('Enter second number'));
 let result = 0;
 let action = prompt('Enter operation, for example + - / *');
 switch(action){

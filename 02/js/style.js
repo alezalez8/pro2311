@@ -75,23 +75,23 @@ let age = parseInt(prompt('Enter your age'));
 console.log(age > 18 ? true: false);
 
 // planets of our solar system
-let planet = prompt('Enter name of planet. Possible name are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune');
+let planet = prompt('Enter name of planet. Possible name are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune').toLowerCase();
 switch(planet){
-   case 'Mercury': console.log('Mercury');
+   case 'mercury': console.log('Mercury');
    break;
-   case 'Venus': console.log('Venus');
+   case 'venus': console.log('Venus');
    break;
-   case 'Earth': console.log('Earth');
+   case 'earth': console.log('Earth');
    break;
-   case 'Mars': console.log('Mars');
+   case 'mars': console.log('Mars');
    break;
-   case 'Jupiter': console.log('Jupiter');
+   case 'jupiter': console.log('Jupiter');
    break;
-   case 'Saturn': console.log('Saturn');
+   case 'saturn': console.log('Saturn');
    break;
-   case 'Uranus': console.log('Uranus');
+   case 'uranus': console.log('Uranus');
    break;
-   case 'Neptune': console.log('Neptune');
+   case 'neptune': console.log('Neptune');
    break;
    default: console.log('There is not such planet in our solar system');
    break;

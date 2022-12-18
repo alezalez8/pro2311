@@ -19,3 +19,17 @@ let evenNumberArray = evenArray(arrRandomNumbers);
 console.log("My array with even numbers is: ", evenNumberArray.toString());
 
 // task two
+
+function myShoppingList() {
+  let myArray = [];
+  for (let i = 0; i < 5; i++) {
+    myArray.push(prompt(`Enter item #  ${i + 1}`));
+  }
+  return myArray;
+}
+
+myList = myShoppingList();
+console.log(myList.toString());
+
+// task three
+

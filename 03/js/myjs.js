@@ -1,9 +1,9 @@
 // task one
 let arrRandomNumbers = [1, 3, 5, 4, 6, 9, 8, 20, 31, 33, 10];
 
-function evenArray(array = []) {
+function evenArray(array) {
   let myArray = [];
-  if (true) {
+  if (Array.isArray(array)) {
     for (let i = 0; i < array.length; i++) {
       if (!(array[i] & 1)) {
         myArray.push(array[i]);
@@ -20,16 +20,52 @@ console.log("My array with even numbers is: ", evenNumberArray.toString());
 
 // task two
 
-function myShoppingList() {
-  let myArray = [];
-  for (let i = 0; i < 5; i++) {
-    myArray.push(prompt(`Enter item #  ${i + 1}`));
-  }
-  return myArray;
-}
+// function myShoppingList() {
+//   let myArray = [];
+//   for (let i = 0; i < 5; i++) {
+//     myArray.push(prompt(`Enter item #  ${i + 1}`));
+//   }
+//   return myArray;
+// }
 
-myList = myShoppingList();
-console.log(myList.toString());
+// myList = myShoppingList();
+// console.log(myList.toString());
 
 // task three
 
+function averageNumber(myArr) {
+  let aver = 0;
+  if (Array.isArray(myArr) && myArr.length >= 1) {
+    for (let i = 0; i < myArr.length; i++) {
+      aver += myArr[i];
+    }
+  } else {
+    alert("This is not an array");
+  }
+  return aver / myArr.length;
+}
+
+let myTest = averageNumber(arrRandomNumbers);
+console.log(myTest);
+
+// task four
+let smile = [":)", "=)", ":)", "=)", ":)", "=)"];
+
+function changeSymbol(myArr) {
+  if (Array.isArray(myArr) && myArr.length >= 1) {
+    for (let i = 0; i < myArr.length; i++) {
+      if (myArr[i] == "=)") {
+        myArr[i] = ";)";
+      }
+    }
+  } else {
+    alert("This is not an array");
+  }
+  return myArr;
+}
+
+console.log(changeSymbol(smile).toString());
+
+// task five
+let animals = ["cat", "cow", "fish", "chicken", "dog", "pig"];
+function addDeleteElement(myWord, myArr) {}

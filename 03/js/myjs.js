@@ -1,5 +1,7 @@
-// task one
 let arrRandomNumbers = [1, 3, 5, 4, 6, 9, 8, 20, 31, 33, 10];
+
+// ======= task one =======
+console.log("======= task one =======");
 
 function evenArray(array) {
   let myArray = [];
@@ -18,20 +20,23 @@ function evenArray(array) {
 let evenNumberArray = evenArray(arrRandomNumbers);
 console.log("My array with even numbers is: ", evenNumberArray.toString());
 
-// task two
+// ======= task two =======
+console.log("======= task two =======");
 
-// function myShoppingList() {
-//   let myArray = [];
-//   for (let i = 0; i < 5; i++) {
-//     myArray.push(prompt(`Enter item #  ${i + 1}`));
-//   }
-//   return myArray;
-// }
+function myShoppingList() {
+  let myArray = [];
+  for (let i = 0; i < 5; i++) {
+    myArray.push(prompt(`Enter item #  ${i + 1}`));
+  }
+  return myArray;
+}
 
-// myList = myShoppingList();
-// console.log(myList.toString());
+myList = myShoppingList();
 
-// task three
+console.log(myList.toString());
+
+// ======= task three =======
+console.log("======= task three =======");
 
 function averageNumber(myArr) {
   let aver = 0;
@@ -48,7 +53,9 @@ function averageNumber(myArr) {
 let myTest = averageNumber(arrRandomNumbers);
 console.log(myTest);
 
-// task four
+// ======= task four =======
+console.log("======= task four =======");
+
 let smile = [":)", "=)", ":)", "=)", ":)", "=)"];
 
 function changeSymbol(myArr) {
@@ -66,7 +73,9 @@ function changeSymbol(myArr) {
 
 console.log(changeSymbol(smile).toString());
 
-// task five
+// ======= task five =======
+console.log("======= task five =======");
+
 let animals = ["cat", "cow", "fish", "chicken", "dog", "pig"];
 
 function addDeleteElement(myWord, myArr) {
@@ -90,4 +99,40 @@ console.log(animals.toString());
 console.log(addDeleteElement("first", animals));
 console.log(animals.toString());
 
-// task six
+// ======= task six =======
+console.log("======= task six =======");
+
+function summNumber(myArr) {
+  let aver = 0;
+  if (Array.isArray(myArr) && myArr.length >= 1) {
+    for (let i = 0; i < myArr.length; i++) {
+      aver += myArr[i];
+    }
+  } else {
+    alert("This is not an array");
+  }
+  return aver;
+}
+
+let mySumm = summNumber(arrRandomNumbers);
+console.log(mySumm);
+
+// ======= task seven =======
+console.log("======= task seven =======");
+
+function myCustomArray(startNumber, finishNumber, myArr) {
+  let myArray = [];
+  if (
+    startNumber < finishNumber &&
+    Array.isArray(myArr) &&
+    finishNumber < myArr.length
+  ) {
+    myArray = myArr.slice(startNumber, finishNumber + 1);
+  } else {
+    alert("This is not an array or correct start and finish");
+  }
+  return myArray;
+}
+
+console.log(arrRandomNumbers.toString());
+console.log(myCustomArray(2, 5, arrRandomNumbers).toString());

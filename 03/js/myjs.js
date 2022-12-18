@@ -68,4 +68,26 @@ console.log(changeSymbol(smile).toString());
 
 // task five
 let animals = ["cat", "cow", "fish", "chicken", "dog", "pig"];
-function addDeleteElement(myWord, myArr) {}
+
+function addDeleteElement(myWord, myArr) {
+  let myArray = [];
+  if (myWord != null && Array.isArray(myArr)) {
+    if (myWord == "last") {
+      myArray.push(myArr.pop());
+    } else if (myWord == "first") {
+      myArray.push(myArr.shift());
+    }
+  } else {
+    alert("This is not an array or correct word");
+  }
+  return myArray;
+}
+
+//test
+console.log(addDeleteElement("last", animals));
+console.log(animals.toString());
+
+console.log(addDeleteElement("first", animals));
+console.log(animals.toString());
+
+// task six

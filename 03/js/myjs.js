@@ -1,29 +1,21 @@
-// let firstArr = [1, 'hello', true, null, [1,2]];
-// for(let i =0; i< firstArr.length; i++){
-//    console.log(`My array item ${firstArr[i]}`);
-// }
-// let sg = firstArr.join('|');
-// console.log(sg);
+// task one
+let arrRandomNumbers = [1, 3, 5, 4, 6, 9, 8, 20, 31, 33, 10];
 
-// let firstConcatArr = [1,2,3];
-// let secondArr = [4,5,6];
-// let res = firstConcatArr.concat(secondArr, 6,7,[8,9]);
-// console.log(res.toString());
-// let myNewArray = new Array('a', 'b');
-// myNewArray.push(34);
-// myNewArray.push(11);
-// myNewArray.push('aaa34');
-// myNewArray.push(3);
-// myNewArray.push(true);
-// console.log(myNewArray.toString());
+function evenArray(array = []) {
+  let myArray = [];
+  if (true) {
+    for (let i = 0; i < array.length; i++) {
+      if (!(array[i] & 1)) {
+        myArray.push(array[i]);
+      }
+    }
+  } else {
+    alert("This is not an array");
+  }
+  return myArray;
+}
 
-let sliceArr = [1,2,3,4,'A', true, 'False str'];
-// let slicePart = sliceArr.slice(0,2);
-let slicePart = sliceArr.slice(4).reverse(); 
+let evenNumberArray = evenArray(arrRandomNumbers);
+console.log("My array with even numbers is: ", evenNumberArray.toString());
 
-
-console.log(slicePart.toString());
-console.log(sliceArr.toString());
-sliceArr.splice(0,3);
-console.log(sliceArr.toString());
-console.log(Array.isArray(sliceArr));
+// task two

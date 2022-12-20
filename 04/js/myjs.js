@@ -43,8 +43,8 @@ let figurs = [
 ];
 
 function calculateArea(figure) {
-  figure.forEach((nameOfFigure, a, b) => {
-    console.log(`${nameOfFigure}, is , ${a * b}`);
+  figure.forEach((element) => {
+    console.log(`${element.figure} is ${element.sizeA * element.sizeB}`);
   });
 }
 calculateArea(figurs);

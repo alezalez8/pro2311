@@ -24,13 +24,29 @@ let currencyUA = {
 
 let bank = [currencyUSD, currencyEURO, currencyUA];
 
-function foreignExchange(userAccount, bank){
-
+// return array of possible amount in euro or usa from grivna
+function foreignExchange(userAccount, bank) {
+  let possibleBuyUsd = 0;
+  let possibleBuyEuro = 0;
+  if (userAccount.amountUa > 0) {
+    bank.forEach((item) => {
+      if (item.name == "usd") {
+        possibleBuyUsd = userAccount.amountUa / item.buy;
+      } else if (item.name == "euro") {
+        possibleBuyEuro = userAccount.amountUa / item.buy;
+      }
+    });
+  } else {
+    alert("the amount of your account in UA is less then zero");
+  }
+  return [possibleBuyUsd, possibleBuyEuro];
 }
+console.log(foreignExchange(userWallet, bank));
 
-function amountInGrivna(){
-  
-}
+// function amountInGrivna(userAccount, bank) {
+//   let amountOfUserMoney = 0;
+//   array.forEach((element) => {});
+// }
 
 // // ===== task 2 =====
 // function move(amountStep, direction) {}

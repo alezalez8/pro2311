@@ -1,53 +1,80 @@
 // // ===== task 1 =====
 
-// let userWallet = {
-//   amountUsa: 120,
-//   amountEuro: 150,
-//   amountUa: 4500,
-// };
+let userWallet = {
+  amountUsa: 120,
+  amountEuro: 150,
+  amountUa: 4500,
+};
 
-// let bank = {
-//   buy: 0,
-//   sell: 0,
-// };
+let currencyUSD = {
+  buy: 39.8,
+  sell: 40.25,
+  name: "usd",
+};
+let currencyEURO = {
+  buy: 41.7,
+  sell: 42.3,
+  name: "euro",
+};
+let currencyUA = {
+  buy: 1,
+  sell: 1,
+  name: "ua",
+};
 
-// let userOne = userWallet;
-// let userTwo = userWallet;
+let bank = [currencyUSD, currencyEURO, currencyUA];
 
-// userOne.amountUa = 3300;
+// return array of possible amount in euro or usa from grivna
+function foreignExchange(userAccount, bank) {
+  let possibleBuyUsd = 0;
+  let possibleBuyEuro = 0;
+  if (userAccount.amountUa > 0) {
+    bank.forEach((item) => {
+      if (item.name == "usd") {
+        possibleBuyUsd = userAccount.amountUa / item.buy;
+      } else if (item.name == "euro") {
+        possibleBuyEuro = userAccount.amountUa / item.buy;
+      }
+    });
+  } else {
+    alert("the amount of your account in UA is less then zero");
+  }
+  return [possibleBuyUsd, possibleBuyEuro];
+}
+console.log(foreignExchange(userWallet, bank));
 
-// console.log(userOne.amountUa);
-// console.log(userTwo.amountUa);
-// console.log(userWallet.amountUa);
-
-// bank.buy = 10;
-
-// let myBank = [];
+// function amountInGrivna(userAccount, bank) {
+//   let amountOfUserMoney = 0;
+//   array.forEach((element) => {});
+// }
 
 // // ===== task 2 =====
 // function move(amountStep, direction) {}
 // function moveUser(direction, move, amount) {}
 // ===== task 3 =====
-// ===== task 4 =====
-let figurs = [
-  {
-    figure: "Squar",
-    sizeA: 4,
-    sizeB: 4,
-  },
-  {
-    figure: "Rectangle",
-    sizeA: 4,
-    sizeB: 8,
-  },
-];
 
-function calculateArea(figure) {
-  figure.forEach((element) => {
-    console.log(`${element.figure} is ${element.sizeA * element.sizeB}`);
-  });
-}
-calculateArea(figurs);
+console.log();
+
+// ===== task 4 =====
+// let figurs = [
+//   {
+//     figure: "Squar",
+//     sizeA: 4,
+//     sizeB: 4,
+//   },
+//   {
+//     figure: "Rectangle",
+//     sizeA: 4,
+//     sizeB: 8,
+//   },
+// ];
+
+// function calculateArea(figure) {
+//   figure.forEach((element) => {
+//     console.log(`${element.figure} is ${element.sizeA * element.sizeB}`);
+//   });
+// }
+// calculateArea(figurs);
 
 // ===== task 5 =====
 // let myArray = [2, 3, 5, 4, 8, 7, 9, 10];

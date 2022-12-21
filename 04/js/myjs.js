@@ -1,74 +1,102 @@
-// // ===== task 1 =====
+//  ===== task 1 =====
 
-let userWallet = {
-  amountUsa: 120,
-  amountEuro: 150,
-  amountUa: 4500,
-};
+// let userWallet = {
+//   amountUsa: 120,
+//   amountEuro: 150,
+//   amountUa: 4500,
+// };
 
-let currencyUSD = {
-  buy: 39.8,
-  sell: 40.25,
-  name: "usd",
-};
-let currencyEURO = {
-  buy: 41.7,
-  sell: 42.3,
-  name: "euro",
-};
-let currencyUA = {
-  buy: 1,
-  sell: 1,
-  name: "ua",
-};
+// let currencyUSD = {
+//   buy: 39.8,
+//   sell: 40.25,
+//   name: "usd",
+// };
+// let currencyEURO = {
+//   buy: 41.7,
+//   sell: 42.3,
+//   name: "euro",
+// };
+// let currencyUA = {
+//   buy: 1,
+//   sell: 1,
+//   name: "ua",
+// };
 
-let bank = [currencyUSD, currencyEURO, currencyUA];
+// let bank = [currencyUSD, currencyEURO, currencyUA];
 
-// return array of possible amount in euro or usa from grivna
-function foreignExchange(userAccount, bank) {
-  let possibleBuyUsd = 0;
-  let possibleBuyEuro = 0;
-  if (userAccount.amountUa > 0) {
-    bank.forEach((item) => {
-      if (item.name == "usd") {
-        possibleBuyUsd = userAccount.amountUa / item.buy;
-      } else if (item.name == "euro") {
-        possibleBuyEuro = userAccount.amountUa / item.buy;
-      }
-    });
-  } else {
-    alert("the amount of your account in UA is less then zero");
-  }
-  return [possibleBuyUsd.toFixed(3), possibleBuyEuro.toFixed(3)];
-}
+// // return array of possible amount in euro or usa from grivna
+// function foreignExchange(userAccount, bank) {
+//   let possibleBuyUsd = 0;
+//   let possibleBuyEuro = 0;
+//   if (userAccount.amountUa > 0) {
+//     bank.forEach((item) => {
+//       if (item.name == "usd") {
+//         possibleBuyUsd = userAccount.amountUa / item.buy;
+//       } else if (item.name == "euro") {
+//         possibleBuyEuro = userAccount.amountUa / item.buy;
+//       }
+//     });
+//   } else {
+//     alert("the amount of your account in UA is less then zero");
+//   }
+//   return [possibleBuyUsd.toFixed(3), possibleBuyEuro.toFixed(3)];
+// }
 
-// return total saves in grivna
-function amountInGrivna(userAccount, bank) {
-  let amountOfUserMoney = 0;
-  bank.forEach((item) => {
-    if (item.name == "usd") {
-      amountOfUserMoney += userAccount.amountUsa * item.sell;
-    } else if (item.name == "euro") {
-      amountOfUserMoney += userAccount.amountEuro / item.sell;
-    }
-  });
+// // return total saves in grivna
+// function amountInGrivna(userAccount, bank) {
+//   let amountOfUserMoney = 0;
+//   bank.forEach((item) => {
+//     if (item.name == "usd") {
+//       amountOfUserMoney += userAccount.amountUsa * item.sell;
+//     } else if (item.name == "euro") {
+//       amountOfUserMoney += userAccount.amountEuro / item.sell;
+//     }
+//   });
 
-  return amountOfUserMoney.toFixed(3);
-}
+//   return amountOfUserMoney.toFixed(3);
+// }
 
-// ===== test functions ======
+// // ===== test functions ======
 
-console.log(
-  "Your saves in US or EU are: ",
-  foreignExchange(userWallet, bank).toString()
-);
-console.log(
-  `Your total summ in grivna (UA) is ${amountInGrivna(userWallet, bank)} grn`
-);
+// console.log(
+//   "Your saves in US or EU are: ",
+//   foreignExchange(userWallet, bank).toString()
+// );
+// console.log(
+//   `Your total summ in grivna (UA) is ${amountInGrivna(userWallet, bank)} grn`
+// );
 
 // ===== task 2 =====
-function move(amountStep, direction) {}
-function moveUser(direction, move, amount) {}
+function move(direction, amountStep) {
+  let direct = "";
+  switch (direction) {
+    case "north":
+      direct = "північ";
+      break;
+    case "west":
+      direct = "захід";
+      break;
+    case "south":
+      direct = "південь";
+      break;
+    case "east":
+      direct = "схід";
+      break;
+    default:
+      direct = "у невідомість :(";
+  }
+  return `Юзер перемістився на ${direct} на ${amountStep} кроків`;
+}
+
+function moveUser(direction, move, amountStep) {
+  return move(direction, amountStep);
+}
+
+// ===== test =====
+console.log(moveUser("north", move, 10));
+console.log(moveUser("south", move, 20));
+console.log(moveUser("???", move, 10));
+
 // ===== task 3 =====
 
 console.log();

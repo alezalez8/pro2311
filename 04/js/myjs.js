@@ -1,53 +1,64 @@
 // // ===== task 1 =====
 
-// let userWallet = {
-//   amountUsa: 120,
-//   amountEuro: 150,
-//   amountUa: 4500,
-// };
+let userWallet = {
+  amountUsa: 120,
+  amountEuro: 150,
+  amountUa: 4500,
+};
 
-// let bank = {
-//   buy: 0,
-//   sell: 0,
-// };
+let currencyUSD = {
+  buy: 39.8,
+  sell: 40.25,
+  name: "usd",
+};
+let currencyEURO = {
+  buy: 41.7,
+  sell: 42.3,
+  name: "euro",
+};
+let currencyUA = {
+  buy: 1,
+  sell: 1,
+  name: "ua",
+};
 
-// let userOne = userWallet;
-// let userTwo = userWallet;
+let bank = [currencyUSD, currencyEURO, currencyUA];
 
-// userOne.amountUa = 3300;
+function foreignExchange(userAccount, bank){
 
-// console.log(userOne.amountUa);
-// console.log(userTwo.amountUa);
-// console.log(userWallet.amountUa);
+}
 
-// bank.buy = 10;
-
-// let myBank = [];
+function amountInGrivna(){
+  
+}
 
 // // ===== task 2 =====
 // function move(amountStep, direction) {}
 // function moveUser(direction, move, amount) {}
 // ===== task 3 =====
-// ===== task 4 =====
-let figurs = [
-  {
-    figure: "Squar",
-    sizeA: 4,
-    sizeB: 4,
-  },
-  {
-    figure: "Rectangle",
-    sizeA: 4,
-    sizeB: 8,
-  },
-];
 
-function calculateArea(figure) {
-  figure.forEach((element) => {
-    console.log(`${element.figure} is ${element.sizeA * element.sizeB}`);
-  });
-}
-calculateArea(figurs);
+console.log();
+
+// ===== task 4 =====
+// let figurs = [
+//   {
+//     figure: "Squar",
+//     sizeA: 4,
+//     sizeB: 4,
+//   },
+//   {
+//     figure: "Rectangle",
+//     sizeA: 4,
+//     sizeB: 8,
+//   },
+// ];
+
+// function calculateArea(figure) {
+//   figure.forEach((element) => {
+//     console.log(`${element.figure} is ${element.sizeA * element.sizeB}`);
+//   });
+// }
+// calculateArea(figurs);
 
 // ===== task 5 =====
 // let myArray = [2, 3, 5, 4, 8, 7, 9, 10];

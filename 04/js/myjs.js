@@ -39,18 +39,36 @@ function foreignExchange(userAccount, bank) {
   } else {
     alert("the amount of your account in UA is less then zero");
   }
-  return [possibleBuyUsd, possibleBuyEuro];
+  return [possibleBuyUsd.toFixed(3), possibleBuyEuro.toFixed(3)];
 }
-console.log(foreignExchange(userWallet, bank));
 
-// function amountInGrivna(userAccount, bank) {
-//   let amountOfUserMoney = 0;
-//   array.forEach((element) => {});
-// }
+// return total saves in grivna
+function amountInGrivna(userAccount, bank) {
+  let amountOfUserMoney = 0;
+  bank.forEach((item) => {
+    if (item.name == "usd") {
+      amountOfUserMoney += userAccount.amountUsa * item.sell;
+    } else if (item.name == "euro") {
+      amountOfUserMoney += userAccount.amountEuro / item.sell;
+    }
+  });
 
-// // ===== task 2 =====
-// function move(amountStep, direction) {}
-// function moveUser(direction, move, amount) {}
+  return amountOfUserMoney.toFixed(3);
+}
+
+// ===== test functions ======
+
+console.log(
+  "Your saves in US or EU are: ",
+  foreignExchange(userWallet, bank).toString()
+);
+console.log(
+  `Your total summ in grivna (UA) is ${amountInGrivna(userWallet, bank)} grn`
+);
+
+// ===== task 2 =====
+function move(amountStep, direction) {}
+function moveUser(direction, move, amount) {}
 // ===== task 3 =====
 
 console.log();

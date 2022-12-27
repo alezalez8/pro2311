@@ -163,3 +163,8 @@ let myModifArray = myArray.map((a) => {
 console.log(myArray.toString());
 console.log(myModifArray.toString());
 console.log("=============================================================");
+
+
+function ss(arr){
+arr.forEach()
+}

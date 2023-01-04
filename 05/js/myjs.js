@@ -104,3 +104,9 @@ let myStringModifier = function () {
 };
 // ===== test =====
 console.log(myStringModifier());
+
+
+let TaskFourName = prompt(`Введіть значення name завдання 4`);
+let FrstToUp = TaskFourName.replace(TaskFourName[0], TaskFourName[0].toUpperCase());
+let LastToUpperValue = FrstToUp.replace(FrstToUp[FrstToUp.length-1], FrstToUp[FrstToUp.length-1].toUpperCase());
+console.log(LastToUpperValue);

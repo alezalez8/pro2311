@@ -1,21 +1,28 @@
 // ===== task 1 =====
 
-function uknownArgements(...myArgs) {
-if (myArgs.length > 1) {
-    let summ = 0;
-    for (let i = 0; i < myArgs.length; i++) {
-      summ += myArgs[i];
+function uknownArguments(...myArgs) {
+  let totalSumm = 0;
+  if (myArgs.length > 2) {
+    for (let numb of myArgs) {
+      if (typeof numb == "number" && !isNaN(numb)) {
+        totalSumm += numb;
+      }
     }
+    return totalSumm;
   } else {
-    console.log("You enter only one parametr");
+    console.log("There are less then two or more arguments");
     return myArgs;
   }
 }
 
-let myParam = prompt("Enter numbers");
+// ===== test 1 =====
+console.log(uknownArguments(1, 4, 5));
+console.log(uknownArguments(1, "as", 7, "qwert", 12));
+console.log(uknownArguments(1));
 
-let summArgs = uknownArgements(myParam);
-console.log(summArgs);
+// ===== task 1 =====
+
+
 
 //---------------------------------------
 // function MyCars(model, year){

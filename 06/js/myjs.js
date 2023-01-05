@@ -1,28 +1,37 @@
 // ===== task 1 =====
 
-function uknownArguments(...myArgs) {
-  let totalSumm = 0;
-  if (myArgs.length > 2) {
-    for (let numb of myArgs) {
-      if (typeof numb == "number" && !isNaN(numb)) {
-        totalSumm += numb;
-      }
-    }
-    return totalSumm;
-  } else {
-    console.log("There are less then two or more arguments");
-    return myArgs;
-  }
+// function uknownArguments(...myArgs) {
+//   let totalSumm = 0;
+//   if (myArgs.length > 2) {
+//     for (let numb of myArgs) {
+//       if (typeof numb == "number" && !isNaN(numb)) {
+//         totalSumm += numb;
+//       }
+//     }
+//     return totalSumm;
+//   } else {
+//     console.log("There are less then two or more arguments");
+//     return myArgs;
+//   }
+// }
+
+// // ===== test 1 =====
+// console.log(uknownArguments(1, 4, 5));
+// console.log(uknownArguments(1, "as", 7, "qwert", 12));
+// console.log(uknownArguments(1));
+
+// ===== task 2 =====
+
+function happyBirthday() {  
+  let dateBirthday = prompt('Input date of your birtday in format: month,day,year');
+  let presentDate = new Date();
+  console.log(presentDate);
+ let myDate = dateBirthday.split(',');
+ console.log(myDate);
+
 }
 
-// ===== test 1 =====
-console.log(uknownArguments(1, 4, 5));
-console.log(uknownArguments(1, "as", 7, "qwert", 12));
-console.log(uknownArguments(1));
-
-// ===== task 1 =====
-
-
+happyBirthday();
 
 //---------------------------------------
 // function MyCars(model, year){

@@ -20,36 +20,41 @@
 // console.log(uknownArguments(1, "as", 7, "qwert", 12));
 // console.log(uknownArguments(1));
 
-// ===== task 2 =====
+// ===== task 2 - 3 =====
 
-function happyBirthday() {  
-  let dateBirthday = prompt('Input date of your birtday in format: month,day,year');
-  let presentDate = new Date();
-  console.log(presentDate);
- let myDate = dateBirthday.split(',');
- console.log(myDate);
-
+function happyBirthday(dateBirthday, monthBirthday) {
+  if (
+    dateBirthday + 1 == new Date().getDate() &&
+    monthBirthday - 1 == new Date().getMonth()
+  ) {
+    console.log("Happy birthday!!!");
+  }
 }
 
-happyBirthday();
+function getAge(dateBirthday, monthBirthday, yearBirthday, happyBirthday) {
+  let presentDate = new Date();
+  let userDate = new Date(yearBirthday, monthBirthday - 1, dateBirthday + 1);
+  console.log("Now is:    ", presentDate.toISOString().slice(0, 10));
+  console.log("You enter: ", userDate.toISOString().slice(0, 10));
+  let correction = 0;
 
-//---------------------------------------
-// function MyCars(model, year){
-//    this.model = model;
-//    this.year = year;
-// }
+  if (
+    presentDate.getMonth() == userDate.getMonth() &&
+    presentDate.getDate() >= dateBirthday
+  ) {
+    correction = 1;
+  }
+  let userAge =
+    presentDate.getFullYear() -
+    userDate.getFullYear() -
+    (presentDate.getMonth() > userDate.getMonth() ? 0 : 1) +
+    correction;
 
-// MyCars.info = function(){
-//    console.log('Simply info');
-// }
+  console.log("Your age is ", userAge);
+  happyBirthday(dateBirthday, monthBirthday);
+}
+// ===== test 2-3 =====
+getAge(05, 01, 1984, happyBirthday);
+getAge(06, 01, 1995, happyBirthday);
 
-// MyCars.prototype.infoP = function(){
-//    console.log('Info prototape');
-// }
-
-// let ford = new MyCars('Taunus', 1980);
-// let toyta = new MyCars('RAV4', 1995);
-
-// let myGarage = [ford, toyta];
-// console.log(myGarage);
-//------------------------------------
+// ===== task 4 =====

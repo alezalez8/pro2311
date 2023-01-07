@@ -29,14 +29,24 @@ class UserMovie {
     this.showAmount = showAmount;
   }
   rateMovie = function () {
-    return showAmount / (new Date().getFullYear - this.year);
+    return this.showAmount / (new Date().getFullYear() - this.year);
   };
 }
 
 let filmLibrary = [
-  new UserMovie(1972, "horor", "QQQ", 45),
-  new UserMovie(1992, "horor", "QQQ", 45),
-  new UserMovie(2020, "horor", "QQQ", 45),
-  new UserMovie(2001, "horor", "QQQ", 45),
-  new UserMovie(1995, "horor", "QQQ", 45),
+  new UserMovie(1972, "horor", "AAA", 348),
+  new UserMovie(1992, "comedy", "BBB", 217),
+  new UserMovie(2020, "detectiv", "CCC", 411),
+  new UserMovie(2001, "fantasy", "DDD", 107),
+  new UserMovie(1995, "family", "EEE", 202),
 ];
+
+let [movieOne, movieTwo, movieThree, movieFour, movieFive] = filmLibrary;
+
+console.log("Rate is ", movieThree.rateMovie());
+
+filmLibrary.sort(function (a, b) {
+  return a.rateMovie - b.rateMovie;
+});
+
+console.log(filmLibrary);

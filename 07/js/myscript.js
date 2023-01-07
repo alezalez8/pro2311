@@ -1,34 +1,19 @@
-class MyFirstClass {
-  constructor(fName, age) {
-    this.fName = fName;
-    this.age = age;
-  }
+// ===== task 1 =====
 
-  info() {
-    console.log(`My name is ${this.fName} and I'm ${this.age} year old`);
-  }
+let myHeader = document.querySelector("header");
+let myNav = document.querySelector("nav");
+let [...myUlLi] = document.querySelectorAll("ul li");
+let myfooter = document.querySelector("footer");
 
-  get fName() {
-    return "${this.fName}";
-  }
-  set fName(value) {
-    this._fName = value;
-  }
+myHeader.innerHTML = "Change header";
+myNav.innerHTML = "Change nav";
 
-  set age(value) {
-    this._age = value;
-  }
+myUlLi.forEach((element) => {
+  element.innerHTML = "Change list li";
+});
 
-  static counter = 0;
-}
+myfooter.innerHTML = "Change footer";
 
-let exm = new MyFirstClass("Alex", 49);
-console.log(exm);
-console.log(MyFirstClass.counter);
+// ===== task 2 =====
 
-MyFirstClass.staticMethod = function(){console.log('static');}
 
-MyFirstClass.prototype.publicMethod = function(){console.log('public');}
-
-console.log(MyFirstClass.staticMethod());
-console.log(exm.publicMethod());

@@ -31,22 +31,36 @@ class UserMovie {
   rateMovie = function () {
     return this.showAmount / (new Date().getFullYear() - this.year);
   };
+
+  get year() {
+    return this._year;
+  }
+  set year(value) {
+    this._year = value;
+  }
 }
 
 let filmLibrary = [
-  new UserMovie(1972, "horor", "AAA", 348),
-  new UserMovie(1992, "comedy", "BBB", 217),
+  new UserMovie(1972, "horor", "AAA", 1348),
   new UserMovie(2020, "detectiv", "CCC", 411),
+  new UserMovie(1992, "comedy", "BBB", 217),
   new UserMovie(2001, "fantasy", "DDD", 107),
-  new UserMovie(1995, "family", "EEE", 202),
+  new UserMovie(1995, "family", "EEE", 2),
 ];
 
 let [movieOne, movieTwo, movieThree, movieFour, movieFive] = filmLibrary;
 
-console.log("Rate is ", movieThree.rateMovie());
+console.log(`Movie ${movieThree.title} has rate ${movieThree.rateMovie()}`);
+console.log(`Movie ${movieTwo.title} has rate ${movieTwo.rateMovie()}`);
 
-filmLibrary.sort(function (a, b) {
-  return a.rateMovie - b.rateMovie;
+filmLibrary.sort((a, b) => {
+  return a.year - b.year;
 });
 
-console.log(filmLibrary);
+console.log("Library sort by year ", filmLibrary);
+
+filmLibrary.sort((a, b) => {
+  return a.rateMovie() - b.rateMovie();
+});
+
+console.log("Library sort by rate ", filmLibrary);

@@ -13,7 +13,7 @@ window.onload = () => {
   // newElem.innerHTML = 'PPPP';
   // headers.appendChild(newElem);
 
-  // let footer = document.querySelector('footer');
+   let footer = document.querySelector('footer');
   // // let div = document.createElement('div');
   // // div.id = 'js';
   // // div.className = 'js-class';
@@ -62,15 +62,56 @@ window.onload = () => {
   let fragment = new DocumentFragment();
   menuItems.forEach((item) => {
     let link = document.createElement("a");
+    link.setAttribute('href', item);
     link.innerText = item;
-    //link.setAttribute("href", "cccc");
+    
     fragment.appendChild(link);
   });
-
   nav.appendChild(fragment);
+
+
+  let sideMenu = document.querySelector('.sideMenu');
+  let links = nav.children;
+  console.log('Links  ',links);  
+  let cloneData = links[0].cloneNode(true);
+  sideMenu.appendChild(cloneData);
+
+
+  // let menuItems1 = ["Item 1  ", "Item 2  ", "Item 3  "];  
+  // let fragment1 = new DocumentFragment();
+  // menuItems1.forEach((item) => {
+  //   let link = document.createElement("p");
+  //   link.innerText = item;    
+  //   fragment1.appendChild(link);
+  // });
+
+
+
+  // let mydiv1 = document.querySelector('.divv');
+  // mydiv1.appendChild(fragment1);
+
+
+
+  let deepP = document.querySelector('#my-p')
+  let cloneP = deepP.cloneNode(true);
+  footer.appendChild(cloneP);
+
 
   let title = document.querySelector('h1');
   let textP = document.createElement('p');
   textP.innerText = 'Hello in P';
-  title.after(textP);
+  title.before(textP);
+
+  let h2 = document.querySelector('h2');
+  //h2.setAttribute('style', 'color:red');
+  h2.style.color = 'red';
+  h2.style.cssText +='padding:40px';
+  h2.style.textAlign = 'center';
+  h2.style.fontSize = '50px';
+  h2.style.border = '5px';
+
+
+  let compStyle = getComputedStyle(h2);
+  console.log(compStyle.color);
+  
 };

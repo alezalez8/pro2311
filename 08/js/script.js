@@ -1,19 +1,15 @@
 window.onload = () => {
   let div = document.querySelector(".input-form");
   let myInput = document.createElement("input");
-  myInput.setAttribute("type", "button");
-  myInput.setAttribute("value", "input your text");
-  div.appendChild(myInput);
-
-  let myDate = new Date();
-  console.log(myDate.toTimeString());
-  console.log(myDate.getDate()); // day
-  console.log(myDate.getMonth()); // month
-  console.log(myDate.getFullYear()); // year
+  myInput.setAttribute("type", "text");
+  //myInput.setAttribute("value", "input your text");
+  // myInput.setAttribute("placeholder", " your text");
+  //div.appendChild(myInput);
 
   let inputTime = function () {
     let myDate = new Date();
     return (
+      "  " +
       myDate.getDate() +
       "." +
       (myDate.getMonth() + 1) +
@@ -26,21 +22,36 @@ window.onload = () => {
     );
   };
 
-  console.log(inputTime());
-  // let createInput = function(){
-  //   let ul = document.createElement('ul');
-  //   for(let i = 0; i < 5; i++){
-  //     let myData = prompt('Enter your data');
-  //     let myDate = new Date();
-
-  //     let li = document.createElement('li');
-  //     li.innerHTML = myData + myDate;
-  //     ul.appendChild(li);
-  //   }
-  //   div.appendChild(ul);
+  // function getValue() {
+  //   let myText = document.querySelector("input").value;
+  //   return myText + "   " + inputTime();
   // }
 
-  // createInput();
+  let createInput = function () {
+    let ul = document.createElement("ul");
+    let count = 0;
+    while (true) {
+      let myData = prompt(
+        "Enter your data. For end press enter with space text"
+      );
+      count++;
+      if (myData === "") {
+        return;
+      }
+      if (count <= 5) {
+        let li = document.createElement("li");
+        li.innerHTML = myData + inputTime();
+        console.log(li);
+        ul.appendChild(li);
+      } else {
+        count--;
+        ul.removeChild(ul.firstElementChild);
+      }
+      div.appendChild(ul);
+    }
+  };
+
+  createInput();
 
   //   //   let headers = document.querySelector("header");
 

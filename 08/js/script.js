@@ -40,7 +40,7 @@ window.onload = () => {
 
   //createInput(); // for run need to uncomment !!!!!!!
   // ===== end task 1 =====
-
+  //----------------------------------------------------------------------
   // ===== task 2 =====
 
   class CustomImage {
@@ -81,7 +81,7 @@ window.onload = () => {
       let impLink = document.createElement("a");
       impLink.setAttribute("href", images.href);
       let img = document.createElement("img");
-      img.src = images.imgPath;     
+      img.src = images.imgPath;
       img.alt = images.alt;
       img.width = 200;
       impLink.appendChild(img);
@@ -93,6 +93,8 @@ window.onload = () => {
   outputImages(arrayOfImages);
 
   // ===== end task 2 =====
+  //----------------------------------------------------------------------
+  // ===== task 3 =====
+  let students = document.querySelector(".students");
+  // ===== end task 3 =====
 };
-
-

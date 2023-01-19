@@ -38,7 +38,7 @@ window.onload = () => {
     );
   };
 
-  //createInput(); // for run need to uncomment !!!!!!!
+  //createInput(); //                          for run need to uncomment !!!!!!!
   // ===== end task 1 =====
   //----------------------------------------------------------------------
   // ===== task 2 =====
@@ -90,11 +90,37 @@ window.onload = () => {
     picture.appendChild(fragmentOfImages);
   };
 
-  outputImages(arrayOfImages);
+  //outputImages(arrayOfImages);                     for run need to uncomment !!!!!!!
 
   // ===== end task 2 =====
   //----------------------------------------------------------------------
   // ===== task 3 =====
   let students = document.querySelector(".students");
+  let createStudentTable = function () {
+    table = document.createElement('table');
+        table.setAttribute('class', 'table');
+        table.classList.add('table-striped', 'text-center');
+
+        let tableHead = document.createElement('tr');
+        let row = document.createElement('tr');
+        table.appendChild(tableHead);
+        table.appendChild(row);
+        students.appendChild(table);
+
+        
+
+
+
+        // headerNamesArr.forEach(element => {
+        //     let th = document.createElement('th');
+        //     th.append(element);
+        //     tableHead.appendChild(th);
+        // });
+        // table.append(tableHead);
+        // parentElem[0].append(table);
+        // thCreated = true;
+  };
+  createStudentTable();
+
   // ===== end task 3 =====
 };

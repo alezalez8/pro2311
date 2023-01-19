@@ -1,6 +1,12 @@
-body{
-   background-color: rgb(39, 79, 2);
+body {
+  background-color: rgb(39, 79, 2);
 }
 h1 {
-   color: rgb(238, 250, 3);
+  color: rgb(238, 250, 3);
+  text-align: center;
+}
+
+.container {
+  color: rgb(227, 205, 6);
+  font-size: 1.2rem;
 }

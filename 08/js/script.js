@@ -5,8 +5,8 @@ window.onload = () => {
     let ul = document.createElement("ul");
     let count = 0;
     while (true) {
-      let myData = prompt("Enter your data or press enter for finish");
-      if (myData === "") {
+      let inputData = prompt("Enter your data or press enter for finish");
+      if (inputData === "") {
         return;
       }
       count++;
@@ -15,15 +15,30 @@ window.onload = () => {
       }
 
       let li = document.createElement("li");
-      li.innerHTML = myData + inputTime();
+      li.innerHTML = inputData + formatTime();
       ul.appendChild(li);
       container.appendChild(ul);
     }
   };
 
-  createInput();
+  let formatTime = function () {
+    let myDate = new Date();
+    return (
+      "  " +
+      myDate.getDate() +
+      "." +
+      (myDate.getMonth() + 1) +
+      "." +
+      myDate.getFullYear() +
+      "  " +
+      myDate.getHours() +
+      ":" +
+      myDate.getMinutes()
+    );
+  };
+
+  //createInput(); // for run need to uncomment !!!!!!!
   // ===== end task 1 =====
 
   // ===== task 2 =====
-  
 };

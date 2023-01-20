@@ -96,15 +96,26 @@ window.onload = () => {
   //----------------------------------------------------------------------
   // ===== task 3 =====
   let students = document.querySelector(".students");
-  let createStudentTable = function () {
-    table = document.createElement('table');
+  let createStudentTable = function () {    
+        table = document.createElement('table');
+        table.setAttribute('border', 1);
         table.setAttribute('class', 'table');
         table.classList.add('table-striped', 'text-center');
 
-        let tableHead = document.createElement('tr');
-        let row = document.createElement('tr');
+        let tableHead = document.createElement('tr');        
+        let nameStudent = document.createElement('th');
+        nameStudent.innerText = 'Name of student';
+        let city = document.createElement('th');
+        city.innerText = 'City';
+        let course = document.createElement('th');
+        course.innerText = 'Current course';
+        tableHead.appendChild(nameStudent);
+        tableHead.appendChild(city);
+        tableHead.appendChild(course);
+
+      
         table.appendChild(tableHead);
-        table.appendChild(row);
+      
         students.appendChild(table);
 
         
@@ -120,7 +131,22 @@ window.onload = () => {
         // parentElem[0].append(table);
         // thCreated = true;
   };
-  createStudentTable();
+
+  let addStudent = function(){
+    let rowTable = document.createElement('tr');
+        let nameStudent = document.createElement('td');
+        nameStudent.innerText = prompt('Enter name');
+        let city = document.createElement('td');
+        city.innerText = prompt('Enter city');
+        let course = document.createElement('td');
+        course.innerText = prompt('Enter course');
+        tableHead.appendChild(nameStudent);
+        tableHead.appendChild(city);
+        tableHead.appendChild(course); 
+  }
+
+ createStudentTable();
+  //addStudent()
 
   // ===== end task 3 =====
 };

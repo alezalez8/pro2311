@@ -38,7 +38,7 @@ window.onload = () => {
     );
   };
 
-  //createInput(); //                          for run need to uncomment !!!!!!!
+  createInput();
   // ===== end task 1 =====
   //----------------------------------------------------------------------
   // ===== task 2 =====
@@ -90,63 +90,59 @@ window.onload = () => {
     picture.appendChild(fragmentOfImages);
   };
 
-  //outputImages(arrayOfImages);                     for run need to uncomment !!!!!!!
+  outputImages(arrayOfImages);
 
   // ===== end task 2 =====
   //----------------------------------------------------------------------
   // ===== task 3 =====
   let students = document.querySelector(".students");
-  let createStudentTable = function () {    
-        table = document.createElement('table');
-        table.setAttribute('border', 1);
-        table.setAttribute('class', 'table');
-        table.classList.add('table-striped', 'text-center');
+  let createStudentTable = function () {
+    table = document.createElement("table");
+    table.setAttribute("border", 1);
+    table.setAttribute("align", "left");
+    table.setAttribute("width", "50%");
+    table.setAttribute("height", "30");
 
-        let tableHead = document.createElement('tr');        
-        let nameStudent = document.createElement('th');
-        nameStudent.innerText = 'Name of student';
-        let city = document.createElement('th');
-        city.innerText = 'City';
-        let course = document.createElement('th');
-        course.innerText = 'Current course';
-        tableHead.appendChild(nameStudent);
-        tableHead.appendChild(city);
-        tableHead.appendChild(course);
+    let tableHead = document.createElement("tr");
+    let nameStudent = document.createElement("th");
+    nameStudent.innerText = "Name of student";
+    let city = document.createElement("th");
+    city.innerText = "City";
+    let course = document.createElement("th");
+    course.innerText = "Current course";
+    tableHead.appendChild(nameStudent);
+    tableHead.appendChild(city);
+    tableHead.appendChild(course);
+    table.appendChild(tableHead);
+    students.appendChild(table);
 
-      
-        table.appendChild(tableHead);
-      
-        students.appendChild(table);
+    // ======== add students ============
+    let nameStudentOne = document.createElement("td");
+    nameStudentOne.innerText = "Shunin Aleksandr";
+    let cityOne = document.createElement("td");
+    cityOne.innerText = "Odessa";
+    let courseOne = document.createElement("td");
+    courseOne.innerText = "1";
+    let rowTableOne = document.createElement("tr");
+    rowTableOne.appendChild(nameStudentOne);
+    rowTableOne.appendChild(cityOne);
+    rowTableOne.appendChild(courseOne);
+    table.appendChild(rowTableOne);
 
-        
-
-
-
-        // headerNamesArr.forEach(element => {
-        //     let th = document.createElement('th');
-        //     th.append(element);
-        //     tableHead.appendChild(th);
-        // });
-        // table.append(tableHead);
-        // parentElem[0].append(table);
-        // thCreated = true;
+    let nameStudentTwo = document.createElement("td");
+    nameStudentTwo.innerText = "Ivanov Oleg";
+    let cityTwo = document.createElement("td");
+    cityTwo.innerText = "Kiev";
+    let courseTwo = document.createElement("td");
+    courseTwo.innerText = "2";
+    let rowTableTwo = document.createElement("tr");
+    rowTableTwo.appendChild(nameStudentTwo);
+    rowTableTwo.appendChild(cityTwo);
+    rowTableTwo.appendChild(courseTwo);
+    table.appendChild(rowTableTwo);
   };
 
-  let addStudent = function(){
-    let rowTable = document.createElement('tr');
-        let nameStudent = document.createElement('td');
-        nameStudent.innerText = prompt('Enter name');
-        let city = document.createElement('td');
-        city.innerText = prompt('Enter city');
-        let course = document.createElement('td');
-        course.innerText = prompt('Enter course');
-        tableHead.appendChild(nameStudent);
-        tableHead.appendChild(city);
-        tableHead.appendChild(course); 
-  }
-
- createStudentTable();
-  //addStudent()
+  createStudentTable();
 
   // ===== end task 3 =====
 };

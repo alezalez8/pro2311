@@ -22,27 +22,27 @@ window.onload = () => {
 
   // let btnRemove = document.querySelector("#remove");
 
- 
-
   // btnRemove.addEventListener('click', ()=>{
   //   btn.removeEventListener('click', displayAlert);
   //   alert("Remove done");
   // });
 
-let h1 = document.querySelector('h1');
-h1.addEventListener('click', function(){
-  console.log(this);
-  this.textContent = 'Helloy';
-})
+  let h1 = document.querySelector("h1");
+  h1.addEventListener("click", function () {
+    console.log(this);
+    this.textContent = "Helloy";
+  });
 
-let [...pArr] = document.querySelectorAll('.div p');
-console.log(pArr);
-for(let i = 0; i < pArr.length; i++){
-  pArr[i].addEventListener('click', function(){
-    this.style.background = 'red';
-    this.textContent = `My index ${i}`;
-  })
-}
-
-
+  let [...pArr] = document.querySelectorAll(".div p");
+  console.log(pArr);
+  for (let i = 0; i < pArr.length; i++) {
+    pArr[i].addEventListener("click", function () {
+      this.style.background = "red";
+      this.textContent = `My index ${i}`;
+    });
+  }
+  let tTest = document.querySelector("h2");
+  tTest.addEventListener("click", function (event) {
+    console.log(event);
+  });
 };

@@ -86,9 +86,10 @@ window.onload = () => {
   );
   e3.addEventListener(
     "click",
-    function () {
+    function (e) {
       this.style.backgroundColor = "orange";
       alert("Div 3 event work");
+e.stopPropagation();
     },
     isTunnel
   );

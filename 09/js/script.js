@@ -63,37 +63,78 @@ window.onload = () => {
   //   console.log(inputData);
   // }
 
-  let isTunnel = false;
-  let e1 = document.querySelector("#first");
-  let e2 = document.querySelector("#second");
-  let e3 = document.querySelector("#third");
+//   let isTunnel = false;
+//   let e1 = document.querySelector("#first");
+//   let e2 = document.querySelector("#second");
+//   let e3 = document.querySelector("#third");
 
-  e1.addEventListener(
-    "click",
-    function () {
-      this.style.backgroundColor = "yellow";
-      alert("Div 1 event work");
-    },
-    isTunnel
-  );
-  e2.addEventListener(
-    "click",
-    function () {
-      this.style.backgroundColor = "green";
-      alert("Div 2 event work");
-    },
-    isTunnel
-  );
-  e3.addEventListener(
-    "click",
-    function (e) {
-      this.style.backgroundColor = "orange";
-      alert("Div 3 event work");
-e.stopPropagation();
-    },
-    isTunnel
-  );
-  let counter 
-   
+//   e1.addEventListener(
+//     "click",
+//     function () {
+//       this.style.backgroundColor = "yellow";
+//       alert("Div 1 event work");
+//     },
+//     isTunnel
+//   );
+//   e2.addEventListener(
+//     "click",
+//     function () {
+//       this.style.backgroundColor = "green";
+//       alert("Div 2 event work");
+//     },
+//     isTunnel
+//   );
+//   e3.addEventListener(
+//     "click",
+//     function (e) {
+//       this.style.backgroundColor = "orange";
+//       alert("Div 3 event work");
+// e.stopPropagation();
+//     },
+//     isTunnel
+//   );
+  let counter = 0;
+  let h2 = document.querySelector('h2');
+  let myTimer = function(){
+    counter++;
+    h2.innerText = counter;
+    if(counter == 59){
+      counter = 0;
+    }
+  }
+   setInterval(myTimer, 1000);
+
+//--------------------------------------------------
+// let countStart = setInterval(function(){
+//     document.querySelector('p').innerText = new Date().toLocaleTimeString();
+
+// }, 1000);
+
+//let myclock = function(isEnable){
+let mm = setInterval(function(){
+    document.querySelector('p').innerText = new Date().toLocaleTimeString();
+
+}, 1000);
+
+
+//}
+
+//myclock(true);
+
+function stopCounter(){
+  clearInterval(mm);
+}
+
+function startAgain(){
+console.log(mm.toString());
+}
+document.querySelector('.bstop').onclick = ()=>{  
+  stopCounter();
+  console.log('STOP')
+}
+document.querySelector('.bstart').onclick = ()=>{
+  startAgain();
+  console.log("START");
+}
 
 };

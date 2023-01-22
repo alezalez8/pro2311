@@ -112,6 +112,7 @@ window.onload = () => {
 
 
   let compStyle = getComputedStyle(h2);
-  console.log('classname  ',h2.className);
+  console.log('classname  ', h2.className);
+  h2.classList.add('add-class');
   
 };

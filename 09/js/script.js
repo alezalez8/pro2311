@@ -1,5 +1,53 @@
-window.onload = () => {
-  let container = document.querySelector(".container");
+window.onload = () => { 
+// ===== task 1 =====
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // container.classList.toggle("show");
   // let width = container.offsetWidth;
   // console.log(width);
@@ -93,16 +141,16 @@ window.onload = () => {
 //     },
 //     isTunnel
 //   );
-  let counter = 0;
-  let h2 = document.querySelector('h2');
-  let myTimer = function(){
-    counter++;
-    h2.innerText = counter;
-    if(counter == 59){
-      counter = 0;
-    }
-  }
-   setInterval(myTimer, 1000);
+  // let counter = 0;
+  // let h2 = document.querySelector('h2');
+  // let myTimer = function(){
+  //   counter++;
+  //   h2.innerText = counter;
+  //   if(counter == 59){
+  //     counter = 0;
+  //   }
+  // }
+  //  setInterval(myTimer, 1000);
 
 //--------------------------------------------------
 // let countStart = setInterval(function(){
@@ -111,30 +159,30 @@ window.onload = () => {
 // }, 1000);
 
 //let myclock = function(isEnable){
-let mm = setInterval(function(){
-    document.querySelector('p').innerText = new Date().toLocaleTimeString();
+// let mm = setInterval(function(){
+//     document.querySelector('p').innerText = new Date().toLocaleTimeString();
 
-}, 1000);
+// }, 1000);
 
 
 //}
 
 //myclock(true);
 
-function stopCounter(){
-  clearInterval(mm);
-}
+// function stopCounter(){
+//   clearInterval(mm);
+// }
 
-function startAgain(){
-console.log(mm.toString());
-}
-document.querySelector('.bstop').onclick = ()=>{  
-  stopCounter();
-  console.log('STOP')
-}
-document.querySelector('.bstart').onclick = ()=>{
-  startAgain();
-  console.log("START");
-}
+// function startAgain(){
+// console.log(mm.toString());
+// }
+// document.querySelector('.bstop').onclick = ()=>{  
+//   stopCounter();
+//   console.log('STOP')
+// }
+// document.querySelector('.bstart').onclick = ()=>{
+//   startAgain();
+//   console.log("START");
+// }
 
 };

@@ -24,6 +24,7 @@ button {
   border-radius: 4px;
   padding: 10px 20px;
   font-size: 0.9rem;
+
 }
 button.hover {
   background: orangered;
@@ -32,20 +33,18 @@ button:active {
   background: black;
   color: #fff;
 }
-.slider {
+.slider-time{
   border: 2px solid black;
   width: 300px;
-  /* height: auto; */
+  height: auto;
   margin: 20px auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-
-.slider-line {
-  width: 1800px;
+.slider-line-time{
   height: 256px;
   display: flex;
   background: orange;
   position: relative;
   left: 0;
-  transition: all ease 1s;
+  /* transition: all ease 1s; */
 }

@@ -52,7 +52,7 @@ window.onload = () => {
   // ===== end task 2 =====
   //======================================================================
   // ===== task 3 =====
-  let timerValue = 4;
+  let timerValue = 60;
   
   let pItem = document.querySelector('p');
   let discMessage = 'Наразі чекаемо знижку...';

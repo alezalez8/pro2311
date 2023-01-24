@@ -9,4 +9,12 @@ window.onload = () => {
     }
     sliderline.style.left = -offset + "px";
   });
+
+  document.querySelector(".slider-prev").addEventListener("click", function () {
+    offset -= 300;
+    if (offset < 0) {
+      offset = 1832;
+    }
+    sliderline.style.left = -offset + "px";
+  });
 };

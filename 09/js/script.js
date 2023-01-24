@@ -34,6 +34,7 @@ window.onload = () => {
   let show = setInterval(showImage, 1000);
 
   // ===== end task 1 =====
+  //======================================================================
   // ===== task 2 =====
 
   document.querySelector(".previous").addEventListener("click", function () {
@@ -49,7 +50,29 @@ window.onload = () => {
     console.log("next ", countOfImage);
   });
   // ===== end task 2 =====
+  //======================================================================
+  // ===== task 3 =====
+  let timerValue = 4;
   
+  let pItem = document.querySelector('p');
+  let discMessage = 'Наразі чекаемо знижку...';
+  let myDiscount = function(){
+    timerValue --;
+    pItem.innerText = `${discMessage}  ${timerValue}`;
+    if(timerValue < 0) {
+      let newMessage = document.createElement('p');
+      pItem.innerText = "Вітання! Ваша знижка 15% !";      
+      alert('Ви дочекались знижок');
+      clearInterval(timerDiscount);
+    }
+  }
+  let timerDiscount = setInterval(myDiscount, 1000);
+
+  // ===== end task 3 =====
+  //======================================================================
+  // ===== task 4 =====
+
+  // ===== end task 4 =====
 
   //=============================================
   // let offset = 0;

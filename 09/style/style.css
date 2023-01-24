@@ -19,12 +19,11 @@ h1 {
   color: rgb(223, 235, 4);
 }
 button {
-  background: none;
+  background: rgb(55, 120, 184);
   border: 1px solid black;
   border-radius: 4px;
   padding: 10px 20px;
   font-size: 0.9rem;
-
 }
 button.hover {
   background: orangered;
@@ -33,18 +32,21 @@ button:active {
   background: black;
   color: #fff;
 }
-.slider-time{
+.slider-time {
   border: 2px solid black;
   width: 300px;
   height: auto;
   margin: 20px auto;
-  /* overflow: hidden; */
 }
-.slider-line-time{
+.slider-line-time {
   height: 256px;
   display: flex;
   background: orange;
   position: relative;
   left: 0;
-  /* transition: all ease 1s; */
+}
+p {
+  text-align: center;
+  color: rgb(223, 235, 4);
+  font-size: 30px;
 }

@@ -31,7 +31,7 @@ window.onload = () => {
     clearInterval(show);
   };
 
-  let show = setInterval(showImage, 1000);
+  //let show = setInterval(showImage, 1000);
 
   // ===== end task 1 =====
   //======================================================================
@@ -66,7 +66,7 @@ window.onload = () => {
       clearInterval(timerDiscount);
     }
   };
-  let timerDiscount = setInterval(myDiscount, 1000);
+  // let timerDiscount = setInterval(myDiscount, 1000);
 
   // ===== end task 3 =====
   //======================================================================
@@ -86,11 +86,16 @@ window.onload = () => {
     e.preventDefault();
   });
 
+  let divId = document.querySelector("#popup");
+  let buttonClose = document.createElement("p");
+  buttonClose.innerText = "Close modal window";
+  divId.appendChild(buttonClose);
+
   let popupOpen = function () {};
   let popupClose = function () {};
 
   // ===== end task 4 =====
-  // https://www.youtube.com/watch?v=qoO1ZNi1LyI
+  // https://www.youtube.com/watch?v=qoO1ZNi1LyI           22.32
 
   //=============================================
   // let offset = 0;

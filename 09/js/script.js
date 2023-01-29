@@ -77,18 +77,20 @@ window.onload = () => {
   let lockPadding = document.querySelectorAll(".lock-padding");
   let unlock = true;
 
-  querySelector("popup_open").addEventListener("click", function (e) {
-    popupOpen();
-    e.preventDefault();
-  });
-  querySelector("popup_close").addEventListener("click", function (e) {
-    popupClose();
-    e.preventDefault();
-  });
+  // querySelector("popup_open").addEventListener("click", function (e) {
+  //   popupOpen();
+  //   e.preventDefault();
+  // });
+  // querySelector("popup_close").addEventListener("click", function (e) {
+  //   popupClose();
+  //   e.preventDefault();
+  // });
 
-  let divId = document.querySelector("#popup");
-  let buttonClose = document.createElement("p");
-  buttonClose.innerText = "Close modal window";
+  let divId = document.querySelector(".popup-test");
+  let buttonClose = document.createElement("button");
+  buttonClose.innerHTML = "Close modal window";
+  //buttonClose.setAttribute
+  console.log(buttonClose);
   divId.appendChild(buttonClose);
 
   let popupOpen = function () {};

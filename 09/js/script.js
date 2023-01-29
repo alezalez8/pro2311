@@ -53,26 +53,44 @@ window.onload = () => {
   //======================================================================
   // ===== task 3 =====
   let timerValue = 60;
-  
-  let pItem = document.querySelector('p');
-  let discMessage = 'Наразі чекаемо знижку...';
-  let myDiscount = function(){
-    timerValue --;
+
+  let pItem = document.querySelector("p");
+  let discMessage = "Наразі чекаемо знижку...";
+  let myDiscount = function () {
+    timerValue--;
     pItem.innerText = `${discMessage}  ${timerValue}`;
-    if(timerValue < 0) {
-      let newMessage = document.createElement('p');
-      pItem.innerText = "Вітання! Ваша знижка 15% !";      
-      alert('Ви дочекались знижок');
+    if (timerValue < 0) {
+      let newMessage = document.createElement("p");
+      pItem.innerText = "Вітання! Ваша знижка 15% !";
+      alert("Ви дочекались знижок");
       clearInterval(timerDiscount);
     }
-  }
+  };
   let timerDiscount = setInterval(myDiscount, 1000);
 
   // ===== end task 3 =====
   //======================================================================
   // ===== task 4 =====
+  let modalWindow = document.createElement("div");
+  let modalButton = document.querySelector("#modalOpen");
+  let body = document.querySelector("body");
+  let lockPadding = document.querySelectorAll(".lock-padding");
+  let unlock = true;
+
+  querySelector("popup_open").addEventListener("click", function (e) {
+    popupOpen();
+    e.preventDefault();
+  });
+  querySelector("popup_close").addEventListener("click", function (e) {
+    popupClose();
+    e.preventDefault();
+  });
+
+  let popupOpen = function () {};
+  let popupClose = function () {};
 
   // ===== end task 4 =====
+  // https://www.youtube.com/watch?v=qoO1ZNi1LyI
 
   //=============================================
   // let offset = 0;
